@@ -17,7 +17,7 @@ namespace pr3
         }
         public string GetName() => name_;
         public void SetName(string name) => name_ = name;
-        public float GetPrice() => price_;
+        public float GetPrice() => price_ - price_* GetDiscount();
         public void SetPrice(float price) => price_ = price;
         public int GetSaled() => saled_;
         public void SetSaled(int saled) => saled_ = saled;
