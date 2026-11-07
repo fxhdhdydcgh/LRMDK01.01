@@ -12,6 +12,9 @@ namespace pr3
         {
             List<Product> products = new List<Product>();
             Product product = new Product();
+            product.SetName("продукт");
+            product.SetSaled(0);
+            product.SetPrice(0);
             Bread bread = new Bread();
             bread.SetName("хлеб1");
             bread.SetSaled(1);
@@ -23,19 +26,19 @@ namespace pr3
             bread1.SetPrice(10);
 
             Bread bread2 = new Bread();
-            bread.SetName("хлеб3");
-            bread.SetSaled(400);
-            bread.SetPrice(10);
+            bread2.SetName("хлеб3");
+            bread2.SetSaled(400);
+            bread2.SetPrice(10);
 
             Milk milk = new Milk();
-            bread.SetName("молоко");
-            bread.SetSaled(5);
-            bread.SetPrice(20);
+            milk.SetName("молоко");
+            milk.SetSaled(5);
+            milk.SetPrice(20);
 
             Milk milk1 = new Milk();
-            bread.SetName("молоко1");
-            bread.SetSaled(20);
-            bread.SetPrice(20);
+            milk1.SetName("молоко1");
+            milk1.SetSaled(20);
+            milk1.SetPrice(20);
 
             products.Add(product);
             products.Add(bread);
@@ -43,6 +46,10 @@ namespace pr3
             products.Add(bread2);
             products.Add(milk);
             products.Add(milk1);
+            foreach (Product item in products)
+            {
+                Console.WriteLine(item.GetName() + "\tпродано: " + item.GetSaled() + "\tцена за штуку: " + item.GetPrice() + "\tскидка:" + item.GetDiscount() + "%\t цена со скидкой: " + item.GetPriceWithDiscount() + "\n");
+            }
         }
     }
 }
